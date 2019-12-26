@@ -1,0 +1,28 @@
+{
+  "name": "CucumberProject",
+  "version": "1.0.0",
+  "description": "First Framework of Protractor with Type Script and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor tmp/config/configuration.js",
+    "pretest": "tsc",
+    "cucumbertest": "protractor config/config/CucumberConfiguration.js",
+    "protractor": "./node_modules/protractor/built/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+  "author": "Ankit",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cucumber": "^6.0.0",
+    "@types/jasmine": "^3.5.0",
+    "@types/jasminewd2": "^2.0.8",
+    "@types/node": "^12.12.21",
+    "cucumber": "~6.0.5",
+    "jasmine": "^3.5.0",
+    "package.json": "^2.0.1",
+    "protractor-cucumber-framework": "^6.2.0",
+    "ts-node": "^8.5.4",
+    "protractor": "^5.4.2",
+    "typescript": "3.6.4"
+  }
+}
