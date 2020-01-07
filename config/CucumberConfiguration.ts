@@ -1,3 +1,5 @@
+import {Config} from 'protractor';
+
 exports.config = {
     useAllAngular2AppRoots: true,
     capabilities: {
@@ -14,17 +16,21 @@ exports.config = {
     // You could set no globals to true to avoid jQuery '$' and protractor '$'
     // collisions on the global namespace.
     noGlobals: true,
+    // onPrepare() {
+    //     require('ts-node').register({
+    //         project: require('path').join(__dirname, '../../tsconfig.json')
+    //     });
+    // },
 
     cucumberOpts: {
-        compiler: [],
+        compiler: 'ts:ts-node/register',
         strict  : true,
-         require: '../../StepDefs/*.ts',
-        // require: '../StepDefs/*.js',
-        // require: '../StepDefs/my_steps.ts',
+        require:  ["../../JSFiles/StepDefs/*.js"],
 
         tags: false,
         // format: ['pretty'],
         profile: false,
-        'no-source': true,
+        'no-source': true
     }
+
 };

@@ -6,7 +6,10 @@
     "inlineSourceMap": true,
     "declaration": false,
     "noImplicitAny": false,
-    "outDir": "config"
+    "skipLibCheck": true,
+    "typeRoots": [ "./node_modules/@types" ],
+    "types": ["node","cucumber"],
+    "outDir": "JSFiles"
 //    "skipLibCheck": true
   },
   "exclude": [
